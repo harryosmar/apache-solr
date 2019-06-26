@@ -4,6 +4,8 @@
 docker-compose up
 ```
 
+This will create solr core `mycore` with this [myconfig/conf/](https://github.com/harryosmar/apache-solr/tree/master/myconfig/conf)
+
 Then open [http://localhost:8983](http://localhost:8983) in your browser.
 
 ## How to enter the container
