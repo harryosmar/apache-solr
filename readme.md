@@ -12,6 +12,23 @@ Then open [http://localhost:8983](http://localhost:8983) in your browser.
 docker exec -it --user=solr my_solr bash
 ```
 
+## How to manually create solr-core on running docker container
+
+```
+docker exec -it --user=solr my_solr bin/solr create_core -c gettingstarted
+```
+
+### see list of example docs
+
+```
+docker exec -it --user=solr my_solr bash -c "ls -lah example/exampledocs"
+```
+
+Then try to index `manufacturers.xml` data
+
+```
+docker exec -it --user=solr my_solr bin/post -c gettingstarted example/exampledocs/manufacturers.xml
+```
 
 ## Links 
 - https://hub.docker.com/_/solr
