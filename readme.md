@@ -18,7 +18,7 @@ docker exec -it --user=solr my_solr bash
 docker exec -it --user=solr my_solr bin/solr create_core -c gettingstarted
 ```
 
-### see list of example docs
+### See example docs
 
 ```
 docker exec -it --user=solr my_solr bash -c "ls -lah example/exampledocs"
@@ -33,6 +33,6 @@ docker exec -it --user=solr my_solr bin/post -c gettingstarted example/exampledo
 ## Links 
 - https://hub.docker.com/_/solr
 - [Troubleshoot](https://github.com/docker-solr/docker-solr/issues/10)
-- Exampe :
+- Example :
 	- [conf/](https://github.com/apache/lucene-solr/tree/master/solr/example/files/conf)
 	- [docs](https://github.com/apache/lucene-solr/tree/master/solr/example/exampledocs)
