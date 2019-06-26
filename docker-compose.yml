@@ -1,0 +1,17 @@
+version: '3'
+services:
+  solr:
+    container_name: my_solr
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./myconfig:/myconfig
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - mycore
+      - /myconfig
+    ports:
+      - "8983:8983"
+    restart: always
