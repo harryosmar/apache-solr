@@ -1,3 +1,11 @@
+- [How to start](#how-to-start)
+	- [1st time run](#1st-time-run)
+	- [How to enter the container](#how-to-enter-the-container)
+- [Solr schema](#solr-schema)
+	- [1. Solr Uses Managed Schema by Default](#1-solr-uses-managed-schema-by-default)
+	- [2. Define your own schema.xml](#2-define-your-own-schemaxml)
+- [Links](#links)
+
 ## How to start
 
 ### 1st time run
@@ -16,7 +24,7 @@ Then open [http://localhost:8983](http://localhost:8983) in your browser.
 docker exec -it --user=solr my_solr bash
 ```
 
-## How to create your own schema
+## Solr schema
 
 There are 2 options to handle your `core` `schema` :
 
@@ -28,7 +36,7 @@ Solr core `films` is using `schema.xml` [myconfig/conf/](https://github.com/harr
 
 ### 2. Define your own schema.xml
 
-[Define your own schema.xml](https://lucene.apache.org/solr/guide/6_6/schema-factory-definition-in-solrconfig.html#SchemaFactoryDefinitioninSolrConfig-Classicschema.xml)
+[Guide how to define your own schema.xml](https://lucene.apache.org/solr/guide/6_6/schema-factory-definition-in-solrconfig.html#SchemaFactoryDefinitioninSolrConfig-Classicschema.xml)
 
 - Create solr core `gettingstarted` on running docker container
 ```
