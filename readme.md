@@ -1,41 +1,53 @@
 ## How to start
 
+### 1st time run
 ```
 docker-compose up
 docker exec -it --user=solr my_solr bin/post -c films data/films.xml
 ```
 
-This will create solr core `mycore` with this [myconfig/conf/](https://github.com/harryosmar/apache-solr/tree/master/myconfig/conf)
+This will create solr core `films` using `conf` [myconfig/conf/](https://github.com/harryosmar/apache-solr/tree/master/myconfig/conf).
 
 Then open [http://localhost:8983](http://localhost:8983) in your browser.
 
-## How to enter the container
+### How to enter the container
 
 ```
 docker exec -it --user=solr my_solr bash
 ```
 
-## How to manually create solr-core on running docker container
+## How to create your own schema
 
+There are 2 options to handle your `core` `schema` :
+
+### 1. Solr Uses Managed Schema by Default
+
+[Solr Uses Managed Schema by Default](https://lucene.apache.org/solr/guide/6_6/schema-factory-definition-in-solrconfig.html#SchemaFactoryDefinitioninSolrConfig-SolrUsesManagedSchemabyDefault) which means it will automatic update the `schema` according to match the indexed `documents`.
+
+Solr core `films` is using `schema.xml` [myconfig/conf/](https://github.com/harryosmar/apache-solr/blob/master/myconfig/conf/schema.xml).
+
+### 2. Define your own schema.xml
+
+[Define your own schema.xml](https://lucene.apache.org/solr/guide/6_6/schema-factory-definition-in-solrconfig.html#SchemaFactoryDefinitioninSolrConfig-Classicschema.xml)
+
+- Create solr core `gettingstarted` on running docker container
 ```
 docker exec -it --user=solr my_solr bin/solr create_core -c gettingstarted
 ```
-
-### See example docs
-
+- See list of example docs
 ```
 docker exec -it --user=solr my_solr bash -c "ls -lah example/exampledocs"
 ```
-
-Then try to index `manufacturers.xml` data
-
+- Then try to index `example/exampledocs/manufacturers.xml` data to solr core `gettingstarted`
 ```
 docker exec -it --user=solr my_solr bin/post -c gettingstarted example/exampledocs/manufacturers.xml
 ```
 
 ## Links 
 - https://hub.docker.com/_/solr
-- [Troubleshoot](https://github.com/docker-solr/docker-solr/issues/10)
+- Troubleshoot
+	- https://github.com/docker-solr/docker-solr/issues/10
+	- [Solr Error This Indexschema is not mutable](https://stackoverflow.com/questions/31719955/solr-error-this-indexschema-is-not-mutable)
 - Example :
 	- [conf/](https://github.com/apache/lucene-solr/tree/master/solr/example/files/conf)
 	- [docs](https://github.com/apache/lucene-solr/tree/master/solr/example/exampledocs)
