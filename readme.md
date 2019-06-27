@@ -1,5 +1,5 @@
 - [How to start](#how-to-start)
-	- [1st time run](#1st-time-run)
+	- [1st time run](#1st-time-set-up)
 	- [How to enter the container](#how-to-enter-the-container)
 - [Solr schema](#solr-schema)
 	- [1. Solr Uses Managed Schema by Default](#1-solr-uses-managed-schema-by-default)
@@ -8,7 +8,7 @@
 
 ## How to start
 
-### 1st time run
+### 1st time set up
 ```
 docker-compose up
 docker exec -it --user=solr my_solr bin/post -c films data/films.xml
