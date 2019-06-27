@@ -2,6 +2,7 @@
 
 ```
 docker-compose up
+docker exec -it --user=solr my_solr bin/post -c films data/films.xml
 ```
 
 This will create solr core `mycore` with this [myconfig/conf/](https://github.com/harryosmar/apache-solr/tree/master/myconfig/conf)

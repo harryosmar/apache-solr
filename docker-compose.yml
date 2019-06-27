@@ -7,10 +7,11 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./myconfig:/myconfig
+      - ./data:/opt/solr/data/
     entrypoint:
       - docker-entrypoint.sh
       - solr-precreate
-      - mycore
+      - films
       - /myconfig
     ports:
       - "8983:8983"

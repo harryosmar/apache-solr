@@ -437,6 +437,11 @@
   </fieldType>
 
   <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
+  <field name="name" type="string" indexed="true" stored="true"/>
+  <field name="directed_by" type="text_general"/>
+  <field name="initial_release_date" type="pdate" indexed="true" stored="true"/>
+  <field name="genre" type="text_general"/>
+
   <field name="_version_" type="plong" indexed="true" stored="true"/>
   <field name="content_type" type="string" indexed="true" stored="true"/>
   <field name="doc_type" type="string" indexed="true" stored="true"/>
@@ -445,7 +450,6 @@
   <field name="content" type="text_general" multiValued="false" indexed="true" stored="true"/>
   <field name="text_shingles" type="text_shingles" indexed="true" stored="false"/>
   <field name="_text_" type="text_general" multiValued="true" indexed="true" stored="false"/>
-  <field name="new_field" type="string" indexed="true" stored="true"/>
 
   <dynamicField name="*_txt_en_split_tight" type="text_en_splitting_tight" indexed="true" stored="true"/>
   <dynamicField name="*_descendent_path" type="descendent_path" indexed="true" stored="true"/>

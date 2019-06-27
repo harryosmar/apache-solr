@@ -1172,7 +1172,7 @@
         <str>EEE MMM ppd HH:mm:ss [z ]yyyy</str>
       </arr>
     </processor>
-    <processor class="solr.AddSchemaFieldsUpdateProcessorFactory">
+   <!--  <processor class="solr.AddSchemaFieldsUpdateProcessorFactory">
       <str name="defaultFieldType">strings</str>
       <lst name="typeMapping">
         <str name="valueClass">java.lang.Boolean</str>
@@ -1191,7 +1191,7 @@
         <str name="valueClass">java.lang.Number</str>
         <str name="fieldType">pdoubles</str>
       </lst>
-    </processor>
+    </processor> -->
 
 
     <processor class="org.apache.solr.update.processor.LangDetectLanguageIdentifierUpdateProcessorFactory">
