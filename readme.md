@@ -9,14 +9,32 @@
 ## How to start
 
 ### 1st time set up
+
+#### build container
+
 ```
 docker-compose up
-docker exec -it --user=solr my_solr bin/post -c films data/films.xml
 ```
 
 This will create solr core `films` using `conf` [myconfig/conf/](https://github.com/harryosmar/apache-solr/tree/master/myconfig/conf).
 
+#### indexing solr documents
+
+```
+docker exec -it --user=solr my_solr bin/post -c films data/films.xml
+```
+
+This will indexing `1098 documents` to solr using data from [data/films.xml]([myconfig/conf/](https://github.com/harryosmar/apache-solr/tree/master/data/films.xml)
+
+![solr indexing](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-indexing.jpg)
+
+![solr num docs](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-num-docs.jpg)
+
+#### check solr documents then do solr query in core `films`
+
 Then open [http://localhost:8983](http://localhost:8983) in your browser.
+
+![solr query](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-query.jpg)
 
 ### How to enter the container
 
