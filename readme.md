@@ -24,11 +24,17 @@ This will create solr core `films` using `conf` [myconfig/conf/](https://github.
 docker exec -it --user=solr my_solr bin/post -c films data/films.xml
 ```
 
-This will indexing `1098 documents` to solr using data from [data/films.xml]([myconfig/conf/](https://github.com/harryosmar/apache-solr/tree/master/data/films.xml)
+This will indexing `1098 documents` to solr using data from [data/films.xml](https://github.com/harryosmar/apache-solr/tree/master/data/films.xml)
 
 ![solr indexing](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-indexing.png)
 
 ![solr num docs](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-num-docs.png)
+
+#### source xml raw data vs solr document
+
+![source xml raw data](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-source-data-xml.png)
+
+![solr document](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-doc.png)
 
 #### check solr documents then do solr query in core `films`
 
