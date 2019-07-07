@@ -32,9 +32,45 @@ This will indexing `1098 documents` to solr using data from [data/films.xml](htt
 
 #### source xml raw data vs solr document
 
-![source xml raw data](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-source-data-xml.png)
+```xml
+<doc>
+    <field name="id">/en/45_2006</field>
+    <field name="directed_by">Gary Lennon</field>
+    <field name="initial_release_date">2006-11-30</field>
+    <field name="genre">Black comedy</field>
+    <field name="genre">Thriller</field>
+    <field name="genre">Psychological thriller</field>
+    <field name="genre">Indie film</field>
+    <field name="genre">Action Film</field>
+    <field name="genre">Crime Thriller</field>
+    <field name="genre">Crime Fiction</field>
+    <field name="genre">Drama</field>
+    <field name="name">.45</field>
+  </doc>
+```
 
-![solr document](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-doc.png)
+```json
+{
+  "id": "/en/45_2006",
+  "directed_by": [
+    "Gary Lennon"
+  ],
+  "initial_release_date": "2006-11-30T00:00:00Z",
+  "genre": [
+    "Black comedy",
+    "Thriller",
+    "Psychological thriller",
+    "Indie film",
+    "Action Film",
+    "Crime Thriller",
+    "Crime Fiction",
+    "Drama"
+  ],
+  "name": ".45",
+  "language": "",
+  "_version_": 1638423141759844352
+}
+```
 
 #### check solr documents then do solr query in core `films`
 
