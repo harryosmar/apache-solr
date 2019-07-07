@@ -26,15 +26,15 @@ docker exec -it --user=solr my_solr bin/post -c films data/films.xml
 
 This will indexing `1098 documents` to solr using data from [data/films.xml]([myconfig/conf/](https://github.com/harryosmar/apache-solr/tree/master/data/films.xml)
 
-![solr indexing](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-indexing.jpg)
+![solr indexing](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-indexing.png)
 
-![solr num docs](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-num-docs.jpg)
+![solr num docs](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-num-docs.png)
 
 #### check solr documents then do solr query in core `films`
 
 Then open [http://localhost:8983](http://localhost:8983) in your browser.
 
-![solr query](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-query.jpg)
+![solr query](https://raw.githubusercontent.com/harryosmar/apache-solr/master/doc/solr-query.png)
 
 ### How to enter the container
 
