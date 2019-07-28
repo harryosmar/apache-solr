@@ -4,6 +4,7 @@
 - [Solr schema](#solr-schema)
 	- [1. Solr Uses Managed Schema by Default](#1-solr-uses-managed-schema-by-default)
 	- [2. Define your own schema.xml](#2-define-your-own-schemaxml)
+	- [3. indexing the documents](#3-indexing-the-documents)
 - [Links](#links)
 
 ## How to start
@@ -106,6 +107,9 @@ docker exec -it --user=solr my_solr bin/solr create_core -c gettingstarted
 ```
 docker exec -it --user=solr my_solr bash -c "ls -lah example/exampledocs"
 ```
+
+### 3. indexing the documents
+
 - Then try to index `example/exampledocs/manufacturers.xml` data to solr core `gettingstarted`
 ```
 docker exec -it --user=solr my_solr bin/post -c gettingstarted example/exampledocs/manufacturers.xml
