@@ -103,13 +103,13 @@ Solr core `films` is using `schema.xml` [myconfig/conf/](https://github.com/harr
 ```
 docker exec -it --user=solr my_solr bin/solr create_core -c gettingstarted
 ```
+
+### 3. indexing the documents
+
 - See list of example docs
 ```
 docker exec -it --user=solr my_solr bash -c "ls -lah example/exampledocs"
 ```
-
-### 3. indexing the documents
-
 - Then try to index `example/exampledocs/manufacturers.xml` data to solr core `gettingstarted`
 ```
 docker exec -it --user=solr my_solr bin/post -c gettingstarted example/exampledocs/manufacturers.xml
